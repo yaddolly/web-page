@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(images/back.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+nav {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 140px;
+  cursor: pointer;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 60px;
+  margin-top: 80px;
+}
+
+.content p {
+  margin: 20px auto;
+  font-weight: 200;
+  line-height: 25px;
+}
+
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+span {
+  background-color: #009688;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
+}
+
+@media (max-width: 786px) {
+    nav img {
+        width: 100px;
+      }
+      nav ul li {
+        margin: 0 10px;
+        font-size: 15px;
+      }
+      .content h1 {
+        font-size: 50px;
+        margin-top: 50px;
+      }
+      button {
+        width: 150px;
+      }
+      
+      
+}
+
+@media (max-width: 500px) {
+    nav img {
+        width: 70px;
+      }
+      nav ul li {
+        margin: 0 10px;
+        font-size: 10px;
+      }
+      .content h1 {
+        font-size: 30px;
+        margin-top: 50px;
+      }
+
+      .content p{
+        font-size: 12px;
+      }
+      button {
+        width: 150px;
+      }
+      
+      
+}
